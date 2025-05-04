@@ -1,7 +1,6 @@
 #!/bin/bash
 
 #Rename all .jpg files in a folder to include today’s date.
-
 if [ $# -gt 0 ]; then
     SOURCE_DIR="$1"
     DATE=$(date +"%Y-%m-%d")
@@ -18,6 +17,7 @@ if [ $# -gt 0 ]; then
         fi
     done
     echo "All .jpg files renamed with date suffix"
+    echo "Done!!"
 else
     echo "No directory specified"
     echo "Usage: batch_remane.sh /path/to/folder"
