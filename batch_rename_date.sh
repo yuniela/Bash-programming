@@ -4,7 +4,7 @@
 
 if [ $# -gt 0 ]; then
     SOURCE_DIR="$1"
-    DATE=$(date+"%Y-%m-%d")
+    DATE=$(date +"%Y-%m-%d")
 
     #find .jpg files modified today
     find "$SOURCE_DIR" -type f -iname "*.jpg" -newermt "$DATE" ! -newermt "$DATE +1 day" | while read -r file; do
