@@ -8,7 +8,7 @@ if [ $# -eq 3 ]; then
     operator=$3
     
     #Valid operators
-    valid_operators=("+" "-" "*" "/" "%" "**")
+    valid_operators=("+" "-" "*" "/" "%" "^")
     is_valid=false
 
     for op in "${valid_operators[@]}"; do
@@ -31,5 +31,6 @@ else
     echo "This script needs 3 arguments"
     echo "Usage: ./simple_calculator.sh <first_number> <second_number> <operator>"
     echo "Example: ./simple_calculator.sh 10 5 +"
+    echo "If you're using * or ** please try ./simple_calculator.sh 10 2 '*' "
     exit 1
 fi
