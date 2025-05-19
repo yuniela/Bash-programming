@@ -8,7 +8,7 @@ if [ $# -eq 3 ]; then
     operator=$3
     
     #Valid operators
-    valid_operators=("+","-","*","/","%","**")
+    valid_operators=("+" "-" "*" "/" "%" "**")
     is_valid=false
 
     for op in "${valid_operators[@]}"; do
